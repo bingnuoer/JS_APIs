@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 20px;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            padding: 20px;
+            border: 20px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // clientHeight clientWidth 不包括border margin ,包括padding
+        const div = document.querySelector('div')
+        console.log(div.clientHeight)
+        console.log(div.clientWidth)
+
+        // 页面尺寸发生改变 触发的事件
+        window.addEventListener('resize',function(){
+            console.log(1)
+        })
+    </script>
+</body>
+</html>

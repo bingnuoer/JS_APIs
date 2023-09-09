@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 公共的部分放到构造函数上
+        function Person(){
+            this.eyes=2
+            this.head=1
+        }
+        // 公共的部分放到原型上
+        // const Person={
+        //     eyes:2,
+        //     head:1
+        // }
+        // 女人，构造函数
+        function Woman() {
+            
+        }
+        // 通过原型对象继承
+        Woman.prototype = new Person()
+        // 指回原来的构造函数
+        Woman.prototype.constructor = Woman
+        
+        // 给女人添加方法
+        Woman.prototype.baby = function(){
+            console.log(宝贝)
+        }
+        // 女人 实例对象
+        const red = new Woman()
+        console.log(red) //  Woman {}
+        console.log(Woman.prototype) // {eyes: 2, head: 1, constructor: ƒ}
+        
+        
+        // 男人，构造函数
+        function Man() {
+
+        }
+        // 通过原型对象继承
+        Man.prototype = new Person()
+        // 继承之后再通过原型对象指回构造函数
+        Man.prototype.constructor = Man
+
+        const pink = new Man()
+        console.log(pink) // Man {}
+        console.log(Man.prototype) // {eyes: 2, head: 1, constructor: ƒ}
+        </script>
+</body>
+
+</html>

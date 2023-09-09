@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj = {
+            uname:'老pink',
+            age:18,
+            hobby:['篮球','乒乓球'],
+            family:{
+                mum:'妈妈',
+                sister:'哥哥'
+            }
+        }
+        // 把对象转换成 JSON 字符串
+        // console.log(JSON.stringify(obj)) 
+        // 把字符串转换成对象——JSON.parse()是重新创建了一个对象
+        const o = JSON.parse(JSON.stringify(obj))
+        o.uname = '小pink'
+        o.family.mum = '漂亮妈妈'
+        console.log(o) // '小pink' ，mum: '漂亮妈妈'
+        console.log(obj) // '老pink' ， mum: '妈妈'
+    </script>
+</body>
+</html>

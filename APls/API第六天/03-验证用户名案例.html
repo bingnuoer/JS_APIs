@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            display: inline-block;
+            width: 250px;
+            height: 30px;
+            vertical-align: middle;
+            line-height: 30px;
+            padding-left: 15px;
+        }
+
+        .error {
+            color: red;
+            background: url(./images/error1.png) no-repeat left center;
+        }
+
+        .right {
+            color: green;
+            background: url(./images/right.png) no-repeat left center;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text">
+    <span></span>
+    <script>
+        // 1.准备正则表达式
+        const reg = /^[a-zA-Z0-9-_]{6,16}$/
+        // 2.给表单添加失去焦点事件
+        const input = document.querySelector('input')
+        const span = document.querySelector('span')
+        // const span = input.nextElementSibling
+        input.addEventListener('blur',function(){
+            // 3.判断，如果符合正则规范，调用right类；否则调用error类
+            if(reg.test(input.value)){
+                span.innerHTML='输入正确'
+                span.classList.add('right')
+                
+            } else {
+                span.innerHTML='输入错误，请输入6-16位数字字母下划线'
+                // span.classList.add('error')
+                // 如果classList.add()这种方法覆盖了类名效果，就使用className=''这种方法
+                span.className='error'
+            }
+        })
+    </script>
+
+</body>
+
+</html>

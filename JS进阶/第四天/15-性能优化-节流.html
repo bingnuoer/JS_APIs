@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .box {
+      margin: auto;
+      width: 500px;
+      height: 500px;
+      background-color: #ccc;
+      color: #fff;
+      text-align: center;
+      font-size: 100px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <script src="./lodash.min.js"></script>
+  <script>
+    const box = document.querySelector('.box')
+    let i = 1
+    function mouseMove() {
+      box.innerHTML = i++
+    }
+    // box.addEventListener('mousemove', mouseMove)
+
+    // 性能优化——节流
+    // 法一：lodash函数库： _.throttle(要节能的函数，毫秒数)
+    box.addEventListener('mousemove', _.throttle(mouseMove, 3000))
+
+    // 法二：手写节流函数
+    // 1.声明一个定时器变量
+    // 2.判断鼠标滑动有没有定时器，有的话不开启定时器
+    // 3.没有定时器开启定时器
+
+    // 节流函数
+    function throttle(fn, t) {
+      let timer = null
+      if (!timer) {
+        timer = setTimeout(function () {
+          // 定时器里面不能用clearTimeout关闭定时器，只能在外面关，所以给timer设置为null达到关闭定时器的效果
+          timer = null
+        }, t)
+      }
+    }
+    box.addEventListener('mousemove', throttle(mouseMove, 500))
+  </script>
+</body>
+
+</html>

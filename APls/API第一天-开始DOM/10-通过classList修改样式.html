@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .active {
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">123</div>
+    <script>
+        // 1.获取元素
+        const box = document.querySelector('.box')
+        // 2.修改
+        // 2.1 追加类
+        box.classList.add('active')
+        // 2.2 删除类
+        box.classList.remove('active')
+        // 2.3 切换类：有就删，没有就加
+        box.classList.toggle('active')
+        box.classList.toggle('active')
+
+
+    </script>
+</body>
+</html>

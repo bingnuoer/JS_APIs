@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">123</div>
+    <div class="box">abc</div>
+    <p id="nav">导航栏</p>
+    <!-- <ul>
+        <li>测试1</li>
+        <li>测试2</li>
+        <li>测试3</li>
+    </ul> -->
+    <ul class="nav">
+        <li>我的首页</li>
+        <li>产品介绍</li>
+        <li>联系方式</li>
+    </ul>
+
+    <script>
+        // 1.获取匹配的第一个元素
+
+        // 获取box
+        // 法一
+        // const box = document.querySelector('div')
+        // 法二
+        // const box = document.querySelector('.box')
+        // console.log(box)
+
+        // 获取nav
+        const p = document.querySelectorAll('#nav')
+        console.log(p)
+        p[0].style.color='red'
+        // 修改p颜色
+        // document.style.color = 'red'
+
+
+        // 获取第一个li
+        // const li = document.querySelector('ul li:first-child')
+        // console.log(li)
+
+        // 获取所有li
+        // const lis = document.querySelectorAll('ul li')
+        // console.log(lis)  // li数组
+
+
+        // 练习
+        // const li = document.querySelectorAll('ul li')
+        // console.log(li)
+        // const nav = document.querySelector('.nav')
+        // console.log(nav)
+        const lis = document.querySelectorAll('.nav li')
+        for (let i = 0; i < lis.length; i++) {
+            console.log(lis[i])
+        }
+
+        const p = document.querySelectorAll('#nav')
+        console.log(p)
+        p[0].style.color='red'
+
+    </script>
+</body>
+
+</html>

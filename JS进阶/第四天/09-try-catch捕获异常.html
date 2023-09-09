@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>123</p>
+    <script>
+        function fn (){
+            // 可能会出现错误的代码放到try里面
+            try{
+                const p = document.querySelector('.p')
+                p.style.color = 'red'
+            } catch(err){
+                // catch捕获浏览器错误信息 err是参数 但是不中断函数程序的执行
+                console.log(err.massage)
+                // 要想捕获浏览器错误信息后中断程序，需要加return/配合throw使用
+                throw new Error('选择器错误')
+                // return
+            }
+            // console.log(11)
+            // finally不论程序有没有错误，都执行
+            finally {
+                alert('弹出警示框')
+            }
+        }
+        fn()
+    </script>
+</body>
+</html>

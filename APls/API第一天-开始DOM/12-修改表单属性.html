@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input type="text" value="电脑"> -->
+    <input type="checkbox" checked>
+    <button disabled>点击</button>
+    <script>
+        const input = document.querySelector('input')
+        // 检查当前checked是true还是false
+        console.log(input.checked) //true 选中
+        //js实现选框是否选中
+        input.checked = false //不选中
+
+        input.checked = true
+        input.checked = 'true' //true 不提倡,有隐式转换
+
+        const but = document.querySelector('button')
+        console.log(but.disabled)  //true 不禁用
+        but.disabled = false //禁用
+
+
+
+
+
+
+
+
+        // // 1.获取元素
+        // const uname = document.querySelector('input')
+        // // 2.获取值
+        // console.log(uname.value)
+        // console.log(uname.innerHTML) //得不到表单值
+        // // 3.修改值
+        // uname.value='这是一台电脑'
+        // console.log(uname.type)
+        // // 设置type属性，type=text是文本内容，type=password是点点隐藏模式
+        // uname.type = 'password'
+
+    </script>
+</body>
+
+</html>

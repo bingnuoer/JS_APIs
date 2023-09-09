@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 实例成员：实例对象上的实例属性和实例方法
+        // function Pig(name) {
+        //     this.name = name
+
+        // }
+        // // 实例对象
+        // const peiqi = new Pig('佩奇')
+        // const qiaozhi = new Pig('乔治')
+        // // 实例属性
+        // peiqi.name = '小猪佩奇'
+        // peiqi.age = 18 
+        // // 实例方法
+        // peiqi.sayHi = () => {
+        //     console.log('hi~~')
+        // }
+        // console.log(peiqi) // Pig {name: '小猪佩奇', age: 18, sayHi: ƒ}
+
+
+        // 静态成员：构造函数上的静态属性、静态方法
+        function Pig(name) {
+            this.name = name
+        }
+        // 静态属性
+        Pig.name = '佩奇'
+        Pig.age = 6
+        // 静态方法
+        Pig.sayHi = () => {
+            console.log(this)
+        }
+        Pig.sayHi() // window
+        console.log(Pig.age)
+    </script>
+</body>
+
+</html>

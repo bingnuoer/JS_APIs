@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const str = '我们在学习前端，为的是前端的高薪工作！'
+        // 1. 定义规则 ，不带引号
+        const reg = /前端/  
+        // 2. 匹配 true/false
+        // 法一：test()
+        // console.log(reg.test(str))  // true
+
+        // 法二：exec()       
+        console.log(reg.exec(str))  // 数组
+    </script>
+</body>
+</html>

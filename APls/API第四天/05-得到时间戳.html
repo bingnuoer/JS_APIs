@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 一、 时间戳三种方法
+        // 1. date.getTime()
+        // const date = new Date()
+        // console.log(date.getTime())
+
+        // 2. +new Date()
+        // console.log(+ new Date())
+
+        // 3. date.now()
+        // console.log(Date.now())
+
+        // 二、获取现在 和 指定时间 的时间戳
+        // console.log(+new Date()) // 1682430087962
+        // console.log(+new Date('2023-4-25 22:00:00'))  // 1682431200000
+
+        // 三、根据日期Day() 得到数字-索引号   返回的是“星期几”
+        const date = new Date()
+        console.log(date.getDay())
+        let arr = ['星期天','星期一','星期二','星期三','星期四','星期五','星期六']
+        console.log(arr[date.getDay()]) 
+    </script>
+</body>
+
+</html>

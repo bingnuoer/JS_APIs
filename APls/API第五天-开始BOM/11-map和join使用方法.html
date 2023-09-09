@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 1.数组map使用方法
+        const arr = ['red', 'blue', 'pink']
+        const newArr = arr.map(function (ele, index) {
+            console.log(ele) // 元素
+            console.log(index)  // 索引号
+            return ele + '颜色'
+        })
+        console.log(newArr)
+
+        // 2.数组join使用方法
+        // 把数组元素转换成一个字符串
+        console.log(newArr.join())  // red颜色,blue颜色,pink颜色
+        console.log(newArr.join('')) // red颜色blue颜色pink颜色
+        console.log(newArr.join('|')) // red颜色|blue颜色|pink颜色
+
+    </script>
+</body>
+
+</html>

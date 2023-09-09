@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 匿名函数
+        // setInterval(function () {
+        //     console.log('一秒钟打印一次')
+        // }, 1000)
+
+        // 有名函数
+        // function fun1() {
+        //     console.log('一秒钟执行一次')
+        // }
+        // setInterval(fun1, 1000) //常用写法：函数名，不带括号，fun()是调用函数，这块是自动调用
+        // setInterval('fun()',1000) //这种fun() 写法不常用
+
+        // 定时器
+        function fun2() {
+            console.log('一秒钟执行一次函数代码')
+        }
+        //     // 开定时器
+        //     setInterval(fun2,1000)
+        //     // 关定时器。并给定时器按照1,2,3顺序编号,注释掉的定时器也算
+        //     let n = setInterval(fun2, 1000)
+        //     console.log(n)  // 2
+        //     clearInterval(n)
+
+        //     function fun3(){
+        //         console.log('一秒钟执行一次函数3')
+        //     }
+        //     setInterval(fun3,1000)
+        //     let m = setInterval(fun3,1000)
+        //     console.log(m)
+
+        let i = 1
+        function getSum() {
+            i++
+            document.write(`${i}<br>`)
+        }
+        setInterval(getSum,200)
+        let n = setInterval(getSum,200)
+        clearInterval(n)
+    </script>
+</body>
+
+</html>

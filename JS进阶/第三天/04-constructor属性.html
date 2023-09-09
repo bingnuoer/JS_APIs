@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function Star (uname){
+        //     this.uname=uname
+        // }
+        // Star.prototype={
+        //     sing:function(){
+        //         console.log('唱歌')
+        //     },
+        //     dance:function(){
+        //         console.log('唱歌')
+        //     }
+        // }
+        // console.log(Star.prototype.constructor())  // [[Prototype]]: Object
+
+        function Star(uname) {
+            this.uname = uname
+        }
+        // 原型对象
+        Star.prototype = {
+            // constructor属性，指回构造函数，防止找不到这个原型对象的构造函数
+            constructor: Star,
+            sing: function () {
+                console.log('唱歌')
+            },
+            dance: function () {
+                console.log('跳舞')
+            }
+        }
+        console.log(Star.prototype.constructor())
+
+    </script>
+</body>
+
+</html>

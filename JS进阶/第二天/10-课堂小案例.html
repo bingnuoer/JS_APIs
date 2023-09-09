@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        const spec = { size: '40*40cm', color: '黑色' }
+        // 1.取对象的值数据 返回数组
+        // console.log(Object.values(spec)) // ['40*40cm', '黑色']
+        // 2.转换为字符串，用'/'连接值，把数组根据分隔符转换为字符串
+        // console.log(Object.values(spec).join('/')) // 40*40cm/黑色
+        // 3.填充到div中
+        document.querySelector('div').innerHTML = Object.values(spec).join('/') // 40*40cm/黑色
+    </script>
+</body>
+
+</html>

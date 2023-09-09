@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.
+        // const pc = ['海尔', '联想', '小米', '方正']
+        // const [hr, lx, mi, fz] = pc
+        // console.log(hr)
+
+        // const pc = ['海尔', '联想', '小米', '方正']
+        const [hr, lx, mi, fz] = ['海尔', '联想', '小米', '方正']
+        console.log(hr) //海尔
+
+        2.
+        function getValue() {
+            return [100, 60]
+        }
+        // console.log(getValue())
+        const [max,min] = getValue()
+        console.log(max) //100
+        console.log(min) //60
+
+    </script>
+</body>
+
+</html>

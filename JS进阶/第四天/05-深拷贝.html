@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const obj = {
+            uname: 'pink',
+            age: 18,
+            hobby: ['乒乓球', '足球']
+
+        }
+        const o = {}
+        function deepCopy(newObj, oldObj) {    
+            debugger     
+            for (let k in oldObj) {  // k === uname，age... 属性名
+                // 对象中属性值是引用数据类型 数组，对象
+                if (oldObj[k] instanceof Array) {
+                    newObj[k] = []
+                    deepCopy(newObj[k],oldObj[k])
+                } else {
+                    // 对象中属性值是一般数据类型
+                    newObj[k] = oldObj[k]
+                }
+            }
+        }
+        deepCopy(o, obj)
+        o.age = 20
+        o.hobby[0] = '篮球'
+        console.log(o) // {uname: 'pink', age: 20}
+        console.log(obj) // {uname: 'pink', age: 18}
+
+        // ______________以上实质上还是浅拷贝______________________
+    </script>
+</body>
+
+</html>

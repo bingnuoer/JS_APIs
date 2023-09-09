@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 3000px;
+            overflow: scroll;
+        }
+
+        div {
+            display: none;
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            /* 滚动条 */
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        我里面有很多很多文字
+        我里面有很多很多文字
+        我里面有很多很多文字
+        我里面有很多很多文字
+        我里面有很多很多文字
+        我里面有很多很多文字
+        我里面有很多很多文字
+        我里面有很多很多文字
+        我里面有很多很多文字
+        我里面有很多很多文字
+        我里面有很多很多文字
+        我里面有很多很多文字
+        我里面有很多很多文字
+        我里面有很多很多文字
+        我里面有很多很多文字
+        我里面有很多很多文字
+        我里面有很多很多文字
+        我里面有很多很多文字
+        我里面有很多很多文字
+    </div>
+    <script>
+        const div = document.querySelector('div')
+        window.addEventListener('scroll', function () {
+            // console.log('我滚了')
+            // 获取html元素
+            // document.documentElement
+            // html元素向上滚动的距离
+            // console.log(document.documentElement.scrollTop)
+            const n = document.documentElement.scrollTop
+            if (n >= 100) {
+                div.style.display = 'block'
+            } else {
+                div.style.display = 'none'
+            }
+
+        })
+
+        // const div = document.querySelector('div')
+        // div.addEventListener('scroll',function(){
+        //     // scrollTop 被卷去的头部
+        //     console.log(div.scrollTop)
+        // })
+    </script>
+</body>
+
+</html>

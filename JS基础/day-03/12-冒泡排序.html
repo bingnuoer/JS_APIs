@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 第i趟
+        // for (let i = 0; i < arr.length - 1; i++) {
+        //     // 第i趟比较j次
+        //     for (let j = 0; j < arr.length - i - 1; j++) {
+        //         // 交换
+        //         if (arr[j] > arr[j + 1]) {
+        //             let temp = 0
+        //             temp = arr[j]
+        //             arr[j] = arr[j + 1]
+        //             arr[j + 1] = temp
+        //         }
+        //     }
+        // }
+        let arr = [2, 4, 3, 5, 1]
+        // 默认升序排列
+        // arr.sort()
+
+        // sort 升序
+        // arr.sort(function (a, b) {
+        //     return a - b
+        // })
+
+        // sort 降序
+        arr.sort(function(a,b){
+            return b-a
+        })
+        document.write(arr)
+    </script>
+</body>
+
+</html>

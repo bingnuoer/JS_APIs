@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Goods(name, price, count) {
+            this.name = name
+            this.price = price
+            this.count = count
+        }
+        const mi = new Goods('小米', 1999, 20)
+        const hw = new Goods('华为', 3999, 59)
+        const vivo = new Goods('vivo', 1888, 100)
+        console.log(mi) // Goods {name: '小米', price: 1999, count: 20}
+        console.log(hw) // Goods {name: '华为', price: 3999, count: 59}
+        console.log(vivo) // Goods {name: 'vivo', price: 1888, count: 100}
+
+        const date = new Date('2023-5-10') 
+        console.log(date) // Wed May 10 2023 00:00:00
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .box {
+      width: 500px;
+      height: 500px;
+      background-color: #ccc;
+      color: #fff;
+      text-align: center;
+      font-size: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <!-- 引入lodash库 -->
+  <script src="./lodash.min.js"></script>
+  <script>
+    const box = document.querySelector('.box')
+    let i = 1
+    // 鼠标移动 数字变化 封装函数
+    function mouseMove() {
+      box.innerHTML = i++
+      // 内部处理会占用大量内存，造成卡顿
+    }
+    // 添加鼠标移动事件
+    // box.addEventListener('mousemove', mouseMove)
+
+    // 解决防抖
+    // 法一：lodash里面的方法： _.debounce(要解决防抖的函数，时间毫秒)
+    // box.addEventListener('mousemove', _.debounce(mouseMove, 500))
+
+
+    // 法二：手写防抖函数
+    // 1.写个定时器变量
+    // 2.判断鼠标移动时 有没有定时器，有就清除
+    // 3.没有就加上定时器
+    // 4.定时器里面写函数调用
+    function debounce(fn, t) {
+      let timer
+      // 返回一个匿名函数
+      return function () {
+        if (timer) clearTimeout(timer)
+        timer = setTimeout(function () {
+          fn() //加小括号 调用fn函数
+        }, t)
+      }
+    }
+    // 因为函数只能执行一次，所以每次调用函数 需要让debounce函数返回一个匿名函数，否则鼠标移动只能执行一次
+    box.addEventListener('mousemove', debounce(mouseMove, 500))
+
+  </script>
+</body>
+
+</html>

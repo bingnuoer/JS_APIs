@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let pink = {
+            uname: 'pink老师',
+            age: 18,
+            gender: '女'
+        }
+        console.log(pink);
+        // 查
+        console.log(pink.age);
+        // 改
+        pink.gender = '男'
+        console.log(pink);
+        // 增
+        pink.weight = 90 + 'kg'
+        console.log(pink);
+        // 删 暂时不推荐
+        delete pink.age
+        console.log(pink);
+
+        // console.log(typeof pink);
+    </script>
+</body>
+
+</html>

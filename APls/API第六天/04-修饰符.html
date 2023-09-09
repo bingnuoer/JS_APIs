@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // i ：不区分大小写
+        console.log(/^java$/.test('java'))
+        console.log(/^java$/.test('JAVA'))  //false
+        console.log(/^java$/i.test('JAVA'))  //true
+
+        // 替换：replace; g:全局
+        const str = 'java技术很牛，学完JAVA工资很高'
+        const newStr = str.replace(/java/ig, '前端')
+        // const newStr = str.replace(/java|JAVA/g, '前端')
+
+        console.log(newStr)
+
+
+    </script>
+</body>
+
+</html>

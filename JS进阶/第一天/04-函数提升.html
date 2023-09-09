@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function fn(){
+        //     console.log("函数提升了")
+        // } 原理是把这个函数声明块提升了，不提升函数调用
+
+        // fn() //函数提升了
+        // function fn(){
+        //     console.log('函数提升了')
+        // }
+
+
+        // 函数表达式本质是赋值，赋值不能 提升
+        // 所以函数表达式必须先赋值，再调用
+        fun()  //报错
+        var fun = function(){
+            console.log('函数表达式')
+        }
+
+
+    </script>
+</body>
+</html>

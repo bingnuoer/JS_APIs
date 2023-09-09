@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1.准备图片 -->
+    <img src="./images/1.webp" alt="">
+    <script>
+        // 2.更改图片
+        // 2.1 随机函数
+        function getRandom(N, M) {
+            return Math.floor(Math.random() * (M - N + 1)) + N
+        }
+        const random = getRandom(1, 6)
+        // 2.2 获取标签
+        const img = document.querySelector('img')
+        // 2.3 修改属性
+        img.src = `./images/${random}.webp`
+
+    </script>
+</body>
+
+</html>

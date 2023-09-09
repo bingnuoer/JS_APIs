@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>发送短信</button>
+    <script>
+        const obj = {
+            age: 18
+        }
+        function fn() {
+            console.log(this)
+        }
+        // bind不调用函数
+        // fn.bind()
+
+        // 改变this指向，返回一个新的函数
+        const fun = fn.bind(obj)
+        fun() // {age: 18}
+        console.log(fun)
+
+        // 需求：有一个按钮，点击一下禁用，2s之后开启
+        const btn = document.querySelector('button')
+        btn.addEventListener('click', function () {
+            // 禁用按钮
+            // 这块的this=btn
+            this.disabled = true
+            // 2s后开启按钮
+            setTimeout(function () {
+                // 原本这块的this=window
+                // 所以通过 bind 改变函数的this指向
+                this.disabled = false
+            }.bind(this), 2000)
+            // btn=this
+        })
+
+
+    </script>
+</body>
+
+</html>

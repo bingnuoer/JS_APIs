@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(){
+
+        }
+        const red = new Person()
+        // 原型链，一层一层找__proto__
+        console.log(red.__proto__)
+        console.log(Person.prototype === red.__proto__)
+        console.log(Person.prototype.__proto__) // Object
+        console.log(Object.prototype.__proto__) // null
+
+        // 查找该原型对象在不在原型链上
+        console.log(red instanceof Person) //true
+        console.log(Person instanceof Object) // true
+        console.log(red instanceof Array) //false
+        console.log([1,2,3] instanceof Array) // true
+    </script>
+</body>
+</html>

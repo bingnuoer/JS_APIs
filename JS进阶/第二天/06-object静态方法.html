@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const o = { name: 'pink', age: 18 }
+        // 1.获取对象所有属性名
+        console.log(Object.keys(o)) //  ['name', 'age']
+        // 2.获取对象所有属性值
+        console.log(Object.values(o)) //  ['pink', 18]
+
+        // 3.对象拷贝
+        const oo = {}
+        Object.assign(oo, o)
+        console.log(oo) //{name: 'pink', age: 18}
+
+        Object.assign(o, { gender: '女' })
+        console.log(o)  // {name: 'pink', age: 18, gender: '女'}
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.变量多，单元值少，undefined
+        // const [a, b, c, d] = [1, 2]
+        // console.log(a)  // 1
+        // console.log(b)  // 2
+        // console.log(c)  // undefined
+        // console.log(d) // undefined
+
+        // 2.变量少，单元值多
+        // const [a, b] = [1, 2, 3, 4]
+        // console.log(a)  // 1
+        // console.log(b)  // 2
+
+        // 3.剩余参数 解决 变量少单元值多的情况
+        // const [a, b, ...arr] = [1, 2, 3, 4]
+        // console.log(a)  // 1
+        // console.log(b)  // 2
+        // console.log(arr) // [3, 4]
+
+        // 4.防止 undefined 传递——赋初值
+        // const [a = 0, b = 0, c = 0, d = 0] = [1, 2]
+        // console.log(a)  // 1
+        // console.log(b)  // 2
+        // console.log(c)  // 0
+        // console.log(d) // 0
+
+        // 5.按需导入赋值
+        // const [a, , c, d] = [1, 2, 3, 4]
+        // console.log(a)  // 1
+        // console.log(c)  // 3
+        // console.log(d) // 4
+
+        // 6.多维数组
+        // const [a, b, c] = [1, 2, [3, 4]]
+        // console.log(a)  // 1
+        // console.log(b)  // 2
+        // console.log(c)  // [3, 4]
+        // console.log(c[0]) // 3
+
+        // const arr = [1, 2, [3, 4]]
+        // console.log(arr[2][0]) // 3
+
+        const [a, b, [c, d]] = [1, 2, [3, 4]]
+        console.log(a)  // 1
+        console.log(b)  // 2
+        console.log(c)  // 3
+        console.log(d) // 4
+
+
+
+    </script>
+</body>
+
+</html>

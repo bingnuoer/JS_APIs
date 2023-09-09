@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        // 1.自定义一个随机生成颜色函数
+        // 形参添加默认值
+        function getRandomColor(flag = true) {
+            if (flag) {
+                // 随机输出十六进制格式颜色
+                // 每次从数组中随机取出1个数，堆叠到颜色字符串中
+                let str = '#'
+                let arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
+                for (let i = 1; i <= 6; i++) {
+                    let random = Math.floor(Math.random() * arr.length)
+                    str += arr[random]
+                }
+                return str
+
+            } else {
+                // 随机输出rgb格式颜色
+                r = Math.floor(Math.random() * 256)
+                g = Math.floor(Math.random() * 256)
+                b = Math.floor(Math.random() * 256)
+                return `rgb(${r},${g},${b})`
+            }
+        }
+        // 2.调用函数函数getRandomColor(布尔值)
+        console.log(getRandomColor(false))
+        // let random = getRandomColor(false)
+        // console.log(random)
+        console.log(getRandomColor(true))
+
+        const div = document.querySelector('div')
+        div.style.background = getRandomColor()
+    </script> 
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // 1.父亲 构造函数
+        // function Star (uname){
+        //     this.uname = uname
+        // }
+        // // 2.老大：原型对象
+        // Star.prototype = {
+        //     constructor:Star,
+        //     sing:function(){
+        //         console.log('唱歌')
+        //     }
+        // }       
+        // // 3.老二:实例对象
+        // const ldh = new Star('刘德华')
+        // // console.log(ldh._proto_)
+
+
+        // // Star.prototype()
+        // // console.log(Star.prototype )
+        // console.log(Star.prototype.constructor === Star) // true
+
+        // console.log(ldh._proto_ === Star.prototype) // false
+        // // console.log(ldh._proto_.constructor === Star)
+
+
+        function Star(){
+
+        }
+        const ldh = new Star()
+        console.log(ldh.__proto__) // Object
+        console.log(ldh.__proto__ === Star.prototype) // true
+        console.log(Star.prototype.constructor === Star) // true
+        console.log(ldh.__proto__.constructor === Star) // true
+
+
+    </script>
+</body>
+</html>

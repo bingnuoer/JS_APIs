@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const arr = [1, 2, 3]
+        // 1.最大值
+        Array.prototype.max = function () {
+            // arr.Math.max(arr)
+            // 数组展开运算符...
+            // this指实例对象Array
+            return Math.max(...this)
+        }
+        // 参数arr
+        console.log(arr.max()) // 3
+
+        // 2.最小值
+        Array.prototype.min = function () {
+            return Math.min(...this)
+        }
+        console.log(arr.min()) // 1
+        console.log([4, 8, 71].min()) // 4
+
+        // 3.求和
+        Array.prototype.sum = function () {
+            return this.reduce((prev, item) => prev + item, 0)
+        }
+        console.log(arr.sum()) // 6
+        console.log([2,5,8].sum()) // 15
+
+        // const arr = new Array(1,2)
+    </script>
+</body>
+
+</html>

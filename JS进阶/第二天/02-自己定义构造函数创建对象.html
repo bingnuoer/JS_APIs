@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 构造函数 创建对象
+        function Pig(uname, age) {
+            this.uname = uname
+            this.age = age
+        }
+        const p = new Pig('佩奇', 6)
+        // const object = new Object()
+        console.log(p) // Pig {uname: '佩奇', age: 6}
+
+        // 以前创建对象 
+        const pig = {uname:'佩奇',age:6}
+        console.log(pig) // {uname: '佩奇', age: 6}
+    </script>
+</body>
+
+</html>

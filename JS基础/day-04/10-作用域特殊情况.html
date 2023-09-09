@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fun(x, y) {
+            // 形参相当于‘全局变量’
+            num = 10 //局部作用域内 变量没有定义 相当于全局变量
+        }
+        fun() //函数调用后才能打印
+        console.log(num);
+        console.log(x);
+    </script>
+</body>
+
+</html>

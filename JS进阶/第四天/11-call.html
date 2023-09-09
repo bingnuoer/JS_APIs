@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj = {
+            uname:'pink'
+        }
+        function fn (x,y){
+            console.log(this) // Window
+            console.log(x+y)
+        }
+        // fn() 
+        // 改变了this指向，从指向window改为指向obj
+        fn.call(obj) // {uname: 'pink'}
+        fn.call(obj,1,2) // 3
+    </script>
+</body>
+</html>

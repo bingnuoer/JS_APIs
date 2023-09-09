@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            margin: 100px;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        p {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>1</p>
+    </div>
+    <script>
+        const div = document.querySelector('div')
+        const p = document.querySelector('p')
+        // 获取距离自己父级元素的左边距离,包含border
+        console.log(div.offsetLeft) //8+100=108
+        // 给父级添加定位，影响offsetLeft值  p.offsetLeft=50
+        console.log(p.offsetLeft)  //108+50=158
+
+        // 检测盒子位置，距离 最近一级带有定位的祖先元素
+    </script>
+</body>
+
+</html>

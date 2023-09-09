@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* input {
+            color: red;
+        } */
+
+        /* 属性选择器 */
+        /* 法一：选择独有属性 */
+        /* input[value] {
+            color: red;
+        } */
+
+        /* 法二：相同属性用值区分 */
+        input[type=text]{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" value="123123" data-id="1" data-name="小米">
+    <input type="password">
+
+    <script>
+        const input = document.querySelector(input[value]) //获取第一个input
+        console.log(input.dataset)
+        console.log([input.dataset]) //自定义属性集合
+        // const id = document.querySelector('[input.dataset.id]')
+        console.log([input.dataset.id]) 
+        console.log(input.dataset.id)
+    </script>
+</body>
+</html>

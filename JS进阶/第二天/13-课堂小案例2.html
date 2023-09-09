@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        const gift = '50g的茶叶,清洗球'
+        // 1.把字符串拆分为数组
+        // console.log(gift.split(',')) // ['50g的茶叶', '清洗球']
+
+        // 2.map 把数组转换成span标签形势
+        // const arr = gift.split(',').map(function(item){
+        //     return `<span>【赠品】 ${item}</span>`
+        // }) // 新数组 ['<span>【赠品】 50g的茶叶</span>', '<span>【赠品】 清洗球</span>']
+        // // console.log(arr)
+
+        // // 再把新数组转换成字符串
+        // const str = gift.split(',').map(function(item){
+        //     return `<span>【赠品】 ${item}</span> <br>`
+        // }).join(' ')
+        // console.log(str) // <span>【赠品】 50g的茶叶</span> <span>【赠品】 清洗球</span>
+
+        // // 3.把字符串写进div标签里
+        // document.querySelector('div').innerHTML = str
+
+        // 法二：箭头函数
+        document.querySelector('div').innerHTML = gift.split(',').map(item => `<span>【赠品】 ${item}</span> <br>`).join(' ')
+    </script>
+</body>
+</html>
